@@ -270,6 +270,10 @@ int estimate_symbol(int rf_mod, P25Heuristics* heuristics, int previous_dibit, i
 #else
 	// Use previous_dibit as it comes.
 #endif
+	if (previous_dibit > 3 || previous_dibit < 0)
+	{
+		previous_dibit = 0;
+	}
 
     valid = 1;
 
